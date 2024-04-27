@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel's Stories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .story {
+            display: none;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Daniel's Stories</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>About Daniel</h2>
+            <p>
+                Daniel is a young storyteller with a creative mind. Here, he shares his real-life experiences and imaginative tales.
+            </p>
+        </section>
+        <section>
+            <h2>Current Projects</h2>
+            <p>
+                While Daniel focuses on expanding his business ventures, he takes time to craft captivating stories for you to enjoy.
+            </p>
+        </section>
+        <section>
+            <h2>Stay Tuned!</h2>
+            <p>
+                Daniel is currently working on new stories to share with you. Check back soon for updates!
+            </p>
+        </section>
+        <button id="showDanielBtn">Daniel's Experiences</button>
+        <button id="showSillyBtn">Little Silly Stories</button>
+        <div class="story" id="danielStory">
+            <h2>Daniel's Experiences</h2>
+            <p>
+                Daniel's experiences will be shown here. Stay tuned!
+            </p>
+        </div>
+        <div class="story" id="sillyStory">
+            <h2>Little Silly Stories</h2>
+            <p id="sillyStoryContent" style="display: none;">
+                <strong>Story 1: The Quest for the Magical Pizza</strong><br><br>
+                Once upon a time, in the land of Pepperonia, there lived a brave knight named Sir Cheesy. Sir Cheesy was on a quest to find the legendary Magical Pizza, which was said to grant whoever found it unlimited toppings for life. Armed with his trusty sword made of garlic bread and accompanied by his loyal squire, Squidge the Squash, Sir Cheesy set out on his epic journey.<br><br>
+                The first obstacle they encountered was the Cheesequake Mountains, where they had to navigate through rivers of melted cheese and avoid the attacks of the fearsome pepperoni eagles. After a perilous journey, they finally reached the other side and continued on their quest.<br><br>
+                Along the way, they faced challenges such as the Forest of Mushrooms, the Swamp of Marinara, and the dreaded Olive Garden of Doom. But with courage and determination, they pressed on.<br><br>
+                Finally, after many trials and tribulations, they reached the Cave of the Magical Pizza. Inside, they found the pizza guarded by the Cheese Dragon, a fearsome creature with scales made of mozzarella. With a fierce battle, Sir Cheesy defeated the dragon and claimed the Magical Pizza.<br><br>
+                As they journeyed back home, Sir Cheesy and Squidge knew that their lives would never be the same. With the Magical Pizza in their possession, they could enjoy the most delicious toppings forevermore.<br><br>
+                <strong>Story 2: The Great Jellybean Escape</strong><br><br>
+                In the land of Candytopia, the jellybeans were tired of being eaten by humans. They decided to stage a daring escape from the candy jar in the kitchen of Mrs. Sweettooth, the sweetest old lady in the neighborhood.<br><br>
+                Led by their fearless leader, Jolly the Jellybean, the jellybeans planned their escape meticulously. They waited until midnight when Mrs. Sweettooth was fast asleep before making their move.<br><br>
+                Working together, they formed a jellybean chain to reach the top of the candy jar. With a mighty heave, they pushed open the lid and spilled out onto the kitchen counter. But their freedom was short-lived as they soon encountered a perilous obstacle – the kitchen floor, a vast expanse of linoleum that seemed to stretch on forever.<br><br>
+                Undeterred, the jellybeans rolled and bounced their way across the treacherous terrain, narrowly avoiding being stepped on by Mrs. Sweettooth's slippers. They reached the safety of the pantry where they celebrated their newfound freedom with a jellybean feast.<br><br>
+                From that day on, the jellybeans roamed the house, exploring every nook and cranny and getting into all sorts of mischief. They became legendary among the other sweets in Candytopia, inspiring tales of bravery and adventure for generations to come.<br><br>
+                <strong>Story 3: The Case of the Missing Socks</strong><br><br>
+                Detective Whiskers, the world's greatest feline detective, was on the case of the missing socks. For weeks, socks had been disappearing from laundry baskets and dresser drawers all over town, leaving their owners baffled and frustrated.<br><br>
+                Armed with his magnifying glass and keen sense of smell, Detective Whiskers set out to crack the case. His first clue came from Mrs. Pawsington, whose favorite pair of argyle socks had vanished without a trace.<br><br>
+                After hours of investigation, Detective Whiskers discovered a secret underground lair beneath the dryer, where a group of mischievous dust bunnies were hoarding the missing socks. Using his quick wit and sharp claws, Detective Whiskers apprehended the culprits and returned the stolen socks to their rightful owners.<br><br>
+                The town rejoiced at the return of their missing socks, and Detective Whiskers was hailed as a hero. From that day on, he was known as the Sock Sleuth, the cat who always gets his socks.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("showDanielBtn").addEventListener("click", function() {
+            var danielStory = document.getElementById("danielStory");
+            var sillyStory = document.getElementById("sillyStory");
+            danielStory.style.display = "block";
+            sillyStory.style.display = "none";
+        });
+
+        document.getElementById("showSillyBtn").addEventListener("click", function() {
+            var danielStory = document.getElementById("danielStory");
+            var sillyStory = document.getElementById("sillyStory");
+            danielStory.style.display = "none";
+            sillyStory.style.display = "block";
+
+            // Display silly stories
+            document.getElementById("sillyStoryContent").style.display = "block";
+        });
+    </script>
+</body>
+</html>
